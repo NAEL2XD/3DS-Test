@@ -7,14 +7,14 @@
 				margin: 0px;
 			}
 
-			#topscreen {
+			#top {
 				width: 400px;
 				height: 215px;
 				overflow: hidden;
 				background-color: red;
 			}
 
-			#bottomscreen {
+			#bottom {
 				width: 320px;
 				height: 212px;
 				overflow: hidden;
@@ -24,14 +24,27 @@
 		</style>
 
 		<script>
-			setInterval(function () {
-				window.scrollTo(40, 215);
-			}, 0);
+			window.addEventListener("load", function() {	
+				const top = document.getElementById("top");
+				const bottom = document.getElementById("bottom");
+	
+				setInterval(function() {
+					window.scrollTo(40, 215);
+				}, 0);
+	
+				window.addEventListener("click", function(click) {
+					bottom.appendChild(document.createTextNode("talking"));
+				});
+			});
 		</script>
 	</head>
 
 	<body>
-		<div id="topscreen">Top Screen</div>
-		<div id="bottomscreen">Bottom Screen</div>
+		<div id="top">
+
+		</div>
+		<div id="bottom">
+
+		</div>
 	</body>
 </html>
