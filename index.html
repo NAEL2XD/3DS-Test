@@ -46,7 +46,7 @@
 
 				// SCORE
 				const scoreText = top.querySelector("#score");
-				let score = 0;
+				let myscore = 0;
 	
 				setInterval(function() {
 					window.scrollTo(40, 215);
@@ -68,8 +68,8 @@
 					box.addEventListener("click", function(data) {
 						box.remove();
 	
-						score++;
-						scoreText.innerHTML = `Score: ${score}`;
+						myscore++;
+						scoreText.innerHTML = `Score: ${myscore}`;
 					});
 					boxes.appendChild(box);
 
