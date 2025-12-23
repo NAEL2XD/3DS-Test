@@ -59,13 +59,7 @@
 					scoreText.style.top = combine([(Math.sin(timer) * 10) - 4, "px"]);
 				}, 0);
 
-				var clickCount = 1;
-				window.addEventListener("click", function() {
-					if (clickCount !== 5) {
-						clickCount++;
-						return;
-					}
-
+				window.setInterval(function() {
 					const box = document.createElement("div");
 					box.className = "box";
 					box.style.position = "relative";
@@ -79,9 +73,7 @@
 						scoreText.innerHTML = combine(["Score: " + curScore]);
 					});
 					boxes.appendChild(box);
-
-					clickCount = 1;
-				});
+				}, 2000);
 			});
 		</script>
 	</head>
