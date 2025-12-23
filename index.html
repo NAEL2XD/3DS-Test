@@ -73,8 +73,8 @@
 					box.style.top = combine([Math.random() * 308, "px;"]);
 					box.style.left = combine([Math.random() * 228, "px;"]);
 					box.addEventListener("click", function(data) {
-						data.target.remove();
-	
+						console.log(data);
+
 						curScore++;
 						scoreText.innerHTML = combine(["Score: " + curScore]);
 					});
