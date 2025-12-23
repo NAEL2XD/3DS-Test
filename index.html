@@ -37,8 +37,10 @@
 
 		<script>
 			window.addEventListener("load", function() {
-				function combine(param1, param2) {
-					return String(param1) + String(param2)
+				function combine(...vla) {
+					return vla.map(function(f) {
+						return String(f);
+					}).join();
 				}
 
 				// TOP
@@ -50,7 +52,7 @@
 
 				// SCORE
 				const scoreText = top.querySelector("#score");
-				var myscore = 0;
+				var curScore = 0;
 	
 				setInterval(function() {
 					window.scrollTo(40, 215);
@@ -71,10 +73,10 @@
 					box.style.top = combine(Math.random() * 308, "px;");
 					box.style.left = combine(Math.random() * 228, "px;");
 					box.addEventListener("click", function(data) {
-						box.remove();
+						data.target.remove();
 	
-						myscore++;
-						scoreText.innerHTML = "Score: " + String(myscore);
+						curScore++;
+						scoreText.innerHTML = combine("Score: " + curScore);
 					});
 					boxes.appendChild(box);
 
