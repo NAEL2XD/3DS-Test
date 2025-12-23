@@ -56,12 +56,12 @@
 					scoreText.style.top = combine([(Math.sin(timer) * 10) - 4, "px"]);
 				}, 0);
 
-				var spawned = 1;
+				var spawned = 0;
 				window.setInterval(function() {
 					const box = document.createElement("div");
 					box.className = "box";
 					box.style.position = "relative";
-					box.style.top = combine([(Math.random() * 228) - (spawned * 12), "px"]);
+					box.style.top = combine([(Math.random() * 216) - (spawned * 12), "px"]);
 					box.style.left = combine([Math.random() * 308, "px"]);
 					box.addEventListener("click", function(data) {
 						const getterBox = data.target;
