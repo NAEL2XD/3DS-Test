@@ -46,7 +46,7 @@
 
 				// SCORE
 				const scoreText = top.querySelector("#score");
-				let myscore = 0;
+				var myscore = 0;
 	
 				setInterval(function() {
 					window.scrollTo(40, 215);
@@ -55,7 +55,7 @@
 					scoreText.style.top = `${(Math.sin(timer) * 10) - 4}px`;
 				}, 0);
 
-				let clickCount = 1;
+				var clickCount = 1;
 				window.addEventListener("click", function() {
 					if (clickCount !== 5) {
 						clickCount++;
