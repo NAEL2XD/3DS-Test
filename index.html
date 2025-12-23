@@ -52,7 +52,7 @@
 					window.scrollTo(40, 215);
 					
 					const timer = new Date().getTime() / 1000;
-					scoreText.style.top = `${(Math.sin(timer) * 10) - 4}px`;
+					scoreText.style.top = String((Math.sin(timer) * 10) - 4) + "px";
 				}, 0);
 
 				var clickCount = 1;
@@ -69,7 +69,7 @@
 						box.remove();
 	
 						myscore++;
-						scoreText.innerHTML = `Score: ${myscore}`;
+						scoreText.innerHTML = "Score: " + String(myscore);
 					});
 					boxes.appendChild(box);
 
