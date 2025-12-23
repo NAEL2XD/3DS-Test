@@ -65,7 +65,7 @@
 					box.style.left = combine([Math.random() * 308, "px"]);
 					box.addEventListener("click", function(data) {
 						const getterBox = data.target;
-						getterBox.style.left = "-1000px";
+						getterBox.style.display = "none";
 
 						curScore++;
 						scoreText.innerHTML = combine(["Score: " + curScore]);
